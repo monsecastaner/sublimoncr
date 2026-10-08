@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sublimon CR | Tienda virtual de sublimación</title>
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+<div class="top"><div class="wrap nav">
+  <a class="brand" href="#inicio"><img src="img/logo.png" alt="Logo Sublimon CR Store" width="44" height="44"><span class="logo">Sublimon CR</span></a>
+  <nav class="menu" aria-label="Principal"><a href="#inicio">Inicio</a><a href="#categorias">Categorías</a><a href="#catalogo">Catálogo</a><a href="#personalizar">Personalizar</a><a href="#contacto">Contacto</a></nav>
+</div></div>
+
+<main id="inicio" class="wrap">
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Bienvenidos a Sublimon CR</span>
+      <h1>Tienda virtual de sublimación</h1>
+      <p>Tazas, botellas, ropa, estuches, bolsas y mucho más, personalizados a tu gusto. Elegí tu producto en el catálogo y te atendemos por WhatsApp o Instagram.</p>
+      <div class="cta">
+        <a class="btn" href="#catalogo">Ver catálogo</a>
+        <a class="btn ig" href="#personalizar">🎨 Personalizar</a>
+        <a class="btn wa" id="waHero" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+    <div class="tiles" id="tiles" aria-hidden="true"><div></div><div></div><div></div></div>
+  </section>
+</main>
+
+<div class="band"><div class="wrap row"><span>Sublimación</span><span>Productos personalizados</span><span>Atención por WhatsApp</span><span>Costa Rica</span></div></div>
+
+<section class="s" id="categorias"><div class="wrap">
+  <div class="kick">Explorá</div><h2>Nuestras categorías</h2>
+  <div class="cats" id="cats"></div>
+</div></section>
+
+<section class="s dark"><div class="wrap">
+  <div class="kick">Es muy fácil</div><h2>Cómo pedir</h2>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Elegí</h3><p>Escogé un producto del catálogo y su talla o medida.</p></div>
+    <div class="step"><b>2</b><h3>Personalizá</h3><p>Subí tu diseño y mirá cómo queda en la vista previa.</p></div>
+    <div class="step"><b>3</b><h3>Escribinos</h3><p>Enviá tu pedido por WhatsApp y coordinamos todo.</p></div>
+  </div>
+</div></section>
+
+<section class="s" id="catalogo"><div class="wrap">
+  <div class="kick">Sin precios · consultá por mensaje</div><h2>Catálogo</h2>
+  <div class="chips" id="chips"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<div class="wrap" style="padding-bottom:54px">
+  <section id="personalizar" aria-labelledby="ptit">
+    <h2 id="ptit">🎨 Personalizá tu producto</h2>
+    <p class="lead">Subí tu diseño, mirá cómo queda y envianos tu pedido por WhatsApp.</p>
+    <div class="cgrid">
+      <div>
+        <label class="field">Producto<select id="cProd"></select></label>
+        <label class="field" id="cColBox"><span>Color</span><select id="cCol"></select></label>
+        <label class="field" id="cOptBox"><span id="cOptLbl">Opción</span><select id="cOpt"></select></label>
+        <label class="field">Tu diseño (imagen PNG, JPG o similar)<input type="file" id="cFile" accept="image/*"></label>
+        <p class="err" id="cErr" role="alert"></p>
+        <label class="field">Tamaño del diseño<input type="range" id="cSize" min="20" max="200" value="100"></label>
+        <div class="row2">
+          <label class="field">Mover ↔<input type="range" id="cX" min="-100" max="100" value="0"></label>
+          <label class="field">Mover ↕<input type="range" id="cY" min="-100" max="100" value="0"></label>
+        </div>
+        <label class="field">Rotación<input type="range" id="cRot" min="-180" max="180" value="0"></label>
+        <div class="row2">
+          <label class="field">Cantidad<input type="number" id="cQty" min="1" value="1"></label>
+        </div>
+        <label class="field">Detalles (nombre, texto, colores, etc.)<textarea id="cNote" rows="3"></textarea></label>
+      </div>
+      <div>
+        <div class="prev"><canvas id="cv" width="400" height="400" aria-label="Vista previa del producto personalizado"></canvas></div>
+        <p class="tip">Vista previa aproximada. El área sublimable final puede variar y confirmamos contigo antes de producir.</p>
+        <div class="cbtns">
+          <button type="button" class="btn wa" id="cSend">💬 Enviar pedido por WhatsApp</button>
+          <button type="button" class="btn ig" id="cShare" hidden>📤 Compartir imagen desde mi celular</button>
+        </div>
+        <p class="tip">Tu imagen no se sube a la página. Al abrir WhatsApp, tocá el clip 📎 y adjuntá tu diseño.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer id="contacto"><div class="wrap">
+  <div class="fgrid">
+    <div><div class="fb"><img src="img/logo.png" alt="" width="56" height="56"><span class="logo">Sublimon CR</span></div><p>Tienda virtual de sublimación y productos personalizados en Costa Rica. Atención por WhatsApp e Instagram.</p></div>
+    <div><h4>Menú</h4><ul><li><a href="#inicio">Inicio</a></li><li><a href="#categorias">Categorías</a></li><li><a href="#catalogo">Catálogo</a></li><li><a href="#personalizar">Personalizar</a></li></ul></div>
+    <div><h4>Contacto</h4><ul><li><a id="waFoot" target="_blank" rel="noopener">WhatsApp</a></li><li><a id="igFoot" target="_blank" rel="noopener">Instagram</a></li><li><a id="ttFoot" target="_blank" rel="noopener">TikTok</a></li></ul>
+      <h4 style="margin-top:20px">Envíos y entregas</h4><ul><li>🛵 Envíos por Uber Flash</li><li>📍 Entregas en San José los sábados por la mañana</li></ul></div>
+  </div>
+  <div class="legal">© Sublimon CR. Las imágenes son ilustrativas; consultanos por disponibilidad y opciones.</div>
+</div></footer>
+<a class="fab" id="waFab" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">💬 Escribinos</a>
+<script src="js/config.js"></script>
+<script src="js/productos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
